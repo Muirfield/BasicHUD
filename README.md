@@ -1,11 +1,10 @@
 <img src="https://raw.githubusercontent.com/Muirfield/BasicHUD/master/media/hud.jpg" style="width:64px;height:64px" width="64" height="64"/>
 
-BasicHUD
-========
+# BasicHUD
 
 * Summary: A configurable heads up display
 * Dependency Plugins: n/a
-* PocketMine-MP version: 1.5 (API:1.12.0)
+* PocketMine-MP version: 1.5 (API:1.12.0), 1.6+php7 (API:2.0.0)
 * DependencyPlugins: -
 * OptionalPlugins: -
 * Categories: Informational
@@ -16,22 +15,22 @@ BasicHUD
 <!-- php: $v_forum_thread = "http://forums.pocketmine.net/threads/basichud.1222/"; -->
 <!-- template: prologue.md -->
 
-**DO NOT POST QUESTION/BUG-REPORTS/REQUESTS IN THE REVIEWS**
+**DO NOT POST QUESTIONS/BUG-REPORTS/REQUESTS IN THE REVIEWS**
 
 It is difficult to carry a conversation in the reviews.  If you
 have a question/bug-report/request please use the
 [Thread](http://forums.pocketmine.net/threads/basichud.1222/) for
 that.  You are more likely to get a response and help that way.
 
-**NOTE:**
+_NOTE:_
 
-This documentation was last updated for version **1.0.6**.
+This documentation was last updated for version **1.0.7**.
 
 Please go to
-[github](https://github.com/alejandroliu/pocketmine-plugins/tree/master/BasicHUD)
+[github](https://github.com/Muirfield/pocketmine-plugins/tree/master/BasicHUD)
 for the most up-to-date documentation.
 
-You can also download this plugin from this [page](https://github.com/alejandroliu/pocketmine-plugins/releases/tag/BasicHUD-1.0.6).
+You can also download this plugin from this [page](https://github.com/Muirfield/pocketmine-plugins/releases/tag/BasicHUD-1.0.7).
 
 <!-- template-end -->
 
@@ -181,9 +180,14 @@ if (($hud = $this->getServer()->getPluginManager()->getPlugin("BasicHUD")) !== n
 
 # Changes
 
+* 1.0.7: display errors
+  * will throw an error if vars.php or messages.php fail to compile.
+  * Changed API to include 2.0.0.  Note that this is just tag change,
+    I have not tested things with the latest PocketMine.  Please
+    post any issues to github.
 * 1.0.6:
   * Fixed vars-example (money issues thanks @vertx)
-  * Display item selected onItemHeld (incomplete)
+  * Display item selected onItemHeld
 * 1.0.5: Performance tweaks
   * Cache permissions for selecting formats
   * An empty vars.php yields an empty function (saving a comparison)
